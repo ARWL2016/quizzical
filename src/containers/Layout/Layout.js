@@ -2,7 +2,8 @@
 
 import React, {Component} from 'react';
 import QuizList from '../QuizList/QuizList';
-// import quizData from '../../data/quiz-data';
+import QuizInfo from '../QuizInfo/QuizInfo';
+import {Route, Redirect, Switch} from 'react-router-dom';
 
 class LayoutContainer extends Component {
 
@@ -10,7 +11,13 @@ class LayoutContainer extends Component {
         return (
             <div>
                 <h1>Quizzical</h1>
-                <QuizList/>
+
+                {/* <QuizList/> */}
+                <Switch>
+                    <Route path="/home" component={QuizList} /> 
+                    <Route path="/info/:id" component={QuizInfo} /> 
+                    <Redirect to="/home" />
+                </Switch>
             </div>
         )
     }
