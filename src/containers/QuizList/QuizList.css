@@ -1,0 +1,10 @@
+.QuizList {
+    margin: 30px auto;
+    border: 1px dotted green;
+    max-width: 500px;
+}
+
+.QuizList > h1 {
+    color: blue;
+    text-align: center;
+}

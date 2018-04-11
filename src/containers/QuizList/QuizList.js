@@ -1,6 +1,7 @@
 import React, { Component } from 'react'; 
 import quizData from '../../data/quiz-data';
 import QuizTitle from '../../components/QuizTitle/QuizTitle';
+import './QuizList.css';
 
 class QuizList extends Component {
     state = {
@@ -27,7 +28,7 @@ class QuizList extends Component {
                 title={title.title}/>
         });
         return (
-            <div>
+            <div className="QuizList">
                 <h1>Quiz Titles</h1>
                 {titles}
             </div>
